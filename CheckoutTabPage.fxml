@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.restaurant.view.CheckoutTabPageController">
+	<children>
+		<TableView fx:id="checkoutTable" prefHeight="500.0" prefWidth="960.0">
+			<columns>
+				<TableColumn fx:id="checkoutID_col" minWidth="100.0" prefWidth="75.0" text="CheckoutID" />
+				<TableColumn fx:id="payment_col" prefWidth="100.0" text="Payment" />
+				<TableColumn fx:id="discount_col" prefWidth="100.0" text="Discount" />
+				<TableColumn fx:id="amount_col" prefWidth="100.0" text="Amount" />
+				<TableColumn fx:id="time_col" prefWidth="100.0" text="Time" />
+				<TableColumn fx:id="date_col" prefWidth="120.0" text="Date" />
+				<TableColumn fx:id="info_col" prefWidth="339.0" text="Info" />
+			</columns>
+		</TableView>
+		<Pane layoutY="500.0" prefHeight="100.0" prefWidth="960.0">
+			<children>
+				<Text layoutX="200.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sum" wrappingWidth="38.97216796875" />
+				<Text layoutX="200.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pay" wrappingWidth="27.175813674926758" />
+				<Text layoutX="380.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change" wrappingWidth="69.17581367492676" />
+				<Button fx:id="checkout_btn" layoutX="801.0" layoutY="9.0" mnemonicParsing="false" onAction="#CheckoutAction" prefHeight="40.0" prefWidth="100.0" text="Checkout" />
+				<Text layoutX="25.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table" />
+				<TextField fx:id="tableNO_field" layoutX="85.0" layoutY="4.0" prefHeight="26.0" prefWidth="55.0" />
+				<TextField fx:id="orderSum_field" editable="false" layoutX="250.0" layoutY="4.0" prefHeight="26.0" prefWidth="100.0" />
+				<ComboBox fx:id="paymentType_cbox" layoutX="684.0" layoutY="4.0" prefHeight="26.0" prefWidth="100.0" />
+				<Text layoutX="580.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PaymentType" wrappingWidth="99.99999046325684" />
+            <Text layoutX="9.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount" wrappingWidth="69.1758120059967" />
+            <TextField fx:id="discount_field" layoutX="85.0" layoutY="35.0" prefHeight="26.0" prefWidth="100.0" />
+            <Text layoutX="597.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info" wrappingWidth="38.97216796875" />
+				<TextField fx:id="pay_field" layoutX="250.0" layoutY="35.0" prefHeight="26.0" prefWidth="100.0" />
+				<TextField fx:id="change_field" editable="false" layoutX="480.0" layoutY="35.0" prefHeight="26.0" prefWidth="100.0" />
+            <TextField fx:id="info_field" layoutX="651.0" layoutY="35.0" prefHeight="20.0" prefWidth="133.0" />
+            <TextField fx:id="orderid_field" editable="false" layoutX="447.0" layoutY="4.0" prefHeight="30.0" prefWidth="133.0" />
+            <Text layoutX="386.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OrderId" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

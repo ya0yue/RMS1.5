@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.restaurant.view.SystemTabPageController">
+	<children>
+		<Pane prefHeight="500.0" prefWidth="960.0">
+			<children>
+				<TableView fx:id="menuTable" editable="true" prefHeight="500.0" prefWidth="960.0">
+					<columns>
+						<TableColumn fx:id="menuID_col" prefWidth="62.0" text="ID" />
+						<TableColumn fx:id="menuName_col" prefWidth="176.0" text="Name" />
+						<TableColumn fx:id="menuQuantity_col" prefWidth="91.0" text="Quantity" />
+						<TableColumn fx:id="menuPrice_col" prefWidth="93.0" text="Price" />
+						<TableColumn fx:id="menuCode_col" text="Code" />
+						<TableColumn fx:id="menuInfo_col" prefWidth="246.0" text="Info" />
+					</columns>
+				</TableView>
+				<TableView fx:id="tableTable" editable="true" prefHeight="500.0" prefWidth="960.0">
+					<columns>
+						<TableColumn fx:id="tableID_col" prefWidth="100.0" text="ID" />
+						<TableColumn fx:id="tableNO_col" minWidth="0.0" prefWidth="91.0" text="NO." />
+						<TableColumn fx:id="tableStatus_col" prefWidth="110.0" text="Status" />
+						<TableColumn fx:id="tableInfo_col" prefWidth="447.0" text="Info" />
+					</columns>
+				</TableView>
+				<TableView fx:id="categoryTable" editable="true" prefHeight="500.0" prefWidth="960.0">
+					<columns>
+						<TableColumn fx:id="categoryID_col" prefWidth="49.0" text="ID" />
+						<TableColumn fx:id="categoryName_col" minWidth="5.0" prefWidth="180.0" text="Name" />
+						<TableColumn fx:id="cegegoryInfo_col" prefWidth="519.0" text="Info" />
+					</columns>
+				</TableView>
+				<TableView fx:id="staffTable" editable="true" prefHeight="500.0" prefWidth="960.0">
+					<columns>
+						<TableColumn fx:id="staffID_col" prefWidth="75.0" text="ID" />
+						<TableColumn fx:id="staffName_col" prefWidth="124.0" text="Name" />
+						<TableColumn fx:id="staffAge_col" prefWidth="61.0" text="Age" />
+						<TableColumn fx:id="staffContact_col" prefWidth="124.0" text="Contact" />
+						<TableColumn fx:id="staffRole_col" minWidth="9.0" prefWidth="113.0" text="Role" />
+						<TableColumn fx:id="staffAccountNO_col" prefWidth="144.0" text="AccountNO" />
+						<TableColumn fx:id="staffAuthority_col" prefWidth="130.0" text="Authority" />
+					</columns>
+				</TableView>
+			</children>
+		</Pane>
+		<Pane layoutY="500.0" prefHeight="70.0" prefWidth="960.0">
+			<children>
+				<Button fx:id="edit_btn" layoutX="833.0" layoutY="17.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="75.0" text="EDIT" />
+				<ToggleButton fx:id="staff_btn" layoutX="533.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Staff" />
+				<ToggleButton fx:id="table_btn" layoutX="402.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Table" />
+				<ToggleButton fx:id="category_btn" layoutX="274.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="Category" />
+				<Text layoutX="30.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings:" />
+				<ToggleButton fx:id="menu_btn" layoutX="150.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Menu" />
+				<Button fx:id="add_btn" layoutX="666.0" layoutY="17.0" maxHeight="38.0" maxWidth="75.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="75.0" text="ADD" />
+				<Button fx:id="delete_btn" layoutX="750.0" layoutY="17.0" maxHeight="38.0" maxWidth="75.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="DELETE" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

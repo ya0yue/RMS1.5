@@ -1,0 +1,31 @@
+create view table_order as
+select a.tableid,tablestatus,tableinfo,c.orderid,orderstatus,orderdate,ordertime,orderinfo,staffid
+from mydb.table a ,mydb.belong b,mydb.order c
+where a.tableid = b.tableno and b.orderid = c.orderid;
+
+create view checkoutinfo as
+select a.OrderID,a.ItemID,a.Quantity,b.CheckOutID,b.Amount,b.Payment,b.PaymentType,b.ChangeMoney,b.Discount,b.CheckoutDate,b.CheckoutTime,b.CheckoutInfo,b.StaffID
+from mydb.contain a ,mydb.checkout b
+where a.OrderID = b.OrderID;
+
+create view staff_authority as
+select a.StaffID,a.StaffName,a.Age,a.ContactNumber,a.Role,a.AccountNo,a.Password,a.ManagerID,c.AuthorityID,c.AuthorityName,c.AuthorityInfo
+from mydb.staff a ,mydb.own b,mydb.authority c
+where a.StaffID = b.StaffID and b.AuthorityID = c.AuthorityID;
+
+create view orderinfo as
+select a.OrderID,b.ItemID,a.OrderStatus,a.OrderDate,a.OrderTime,a.OrderInfo,a.StaffID,b.ItemName,b.ItemQuantity,b.ItemPrice,b.ItemCode,b.ItemInfo,b.CategoryID
+from mydb.order a ,mydb.menu_item b,mydb.contain c
+where a.OrderID = c.OrderID and b.ItemID = c.ItemID;
+
+DELIMITER //
+CREATE PROCEDURE Getcheckoutinfo  (IN tableid int(10))
+ BEGIN
+SELECT  CheckOutID,Amount,Payment,PaymentType,ChangeMoney,Discount,CheckoutDate,CheckoutTime,CheckoutInfo,orderid,StaffID
+FROM mydb.checkoutinfo where orderid in (select orderid from mydb.belong where tableno = tableid) group by orderid;
+ END //
+DELIMITER ;
+
+SELECT * FROM mydb.table where tableno = 3;  --确定table状态
+SELECT * FROM mydb.`order` where orderid in (SELECT orderid FROM mydb.belong where tableno = 3);--如果table状态正常，查询是否有正常记录
+SELECT * FROM mydb.checkout where OrderID = 1; --若有正常记录，应该没有checkout记录
