@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="com.restaurant.view.LoginViewController"
+	maxHeight="400.0" maxWidth="800.0" minHeight="400.0" minWidth="800.0"
+	prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<Text layoutX="157.0" layoutY="259.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="AccountNO:">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Text>
+		<Text layoutX="157.0" layoutY="305.0" strokeType="OUTSIDE"
+			strokeWidth="0.0" text="Password:">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Text>
+		<TextField fx:id="accountNO_field" layoutX="327.0" layoutY="240.0" prefHeight="26.0"
+			prefWidth="317.0" />
+		<PasswordField fx:id="password_field" layoutX="327.0" layoutY="284.0" prefHeight="26.0"
+			prefWidth="317.0" />
+		<Button fx:id="loginButton" layoutX="515.0" layoutY="346.0"
+			mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Login" />
+		<Button fx:id="exitButton" layoutX="371.0" layoutY="346.0" mnemonicParsing="false"
+			prefHeight="26.0" prefWidth="102.0" text="Exit" />
+		<ImageView fitHeight="200.0" fitWidth="800.0">
+			<image>
+				<Image url="@images/login.png" />
+			</image>
+		</ImageView>
+	</children>
+</Pane>
